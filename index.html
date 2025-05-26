@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Feira Tecnológica</title>
+</head>
+<body> 
+    
+   
+    <h1 id="titulo">Feira Tecnológica 2025</h1>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+function chuvaConfete() {
+  confetti({
+    particleCount: 3,
+    startVelocity: 0,
+    spread: 360,
+    ticks: 200,
+    origin: {
+      x: Math.random(),   // posição aleatória na horizontal
+      y: 0                // sempre começa do topo
+    }
+  });
+  setTimeout(chuvaConfete, 100);
+}
+
+chuvaConfete();
+</script>
+  
+   
+    <nav>
+        <a href="index.html">Início</a> |
+        <a href="curso.html">Sobre o curso</a> |
+        <a href="cadastro.html">Cadastro</a> |
+        <a href="contato.html">Contato</a>
+    </nav>
+   
+   
+  
+   
+   <div class="pinto">
+    <p>Data provisória: 10 de outubro de 2025</p>
+    <p>Horário: das 09h às 17h</p>
+</div>
+   
+</body>
+</html>
+
+    <style>
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+        
+            height: 100vh;
+            position: relative;
+            padding: 20px;
+            z-index: 0;
+        }
+
+       
+       
+       
+        /* Fundo com imagem e escurecimento */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('cursos.jpg') no-repeat center center/cover;
+            z-index: -2;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.659);
+            z-index: -1;
+        }
+
+       
+       
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-size: 60px;
+        }
+
+        p {
+            margin-top: 90px;
+            text-align: center;
+            color: #f0f0f0;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .pinto{
+
+    margin-top: 20px;
+}
+
+       
+
+
+
+
+
+
+/* Navegação */
+        nav {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #00d2ff;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #1abc9c;
+        }
+
+        
+        
+        
+        
+        
+        
+        /* Container */
+        
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        
+        
+        
+        
+        
+        /* Formulário */
+        form label {
+            display: block;
+            margin-bottom: 6px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        form input,
+        form textarea,
+        form button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        form button {
+            margin-top: 20px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #219150;
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>

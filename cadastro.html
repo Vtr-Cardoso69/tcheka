@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Participante</title>
+</head>
+<body>
+   
+  
+    <h1>Cadastro de Participante</h1>
+  
+  
+  
+    <nav>
+        <a href="index.html">Início</a> |
+        <a href="curso.html">Sobre o curso</a> |
+        <a href="cadastro.html">Cadastro</a> |
+        <a href="contato.html">Contato</a>
+    </nav>
+
+
+
+
+    <form action="receber-cadastro.php" method="post">
+      
+        <div class="border">
+       
+          
+       
+        <label>Nome:</label><br>
+        <input type="text" name="nome" required><br>
+
+        <label>Sobrenome:</label><br>
+        <input type="text" name="sobrenome" required><br>
+
+        <label>Data de nascimento:</label><br>
+        <input type="date" name="nascimento" required><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <button type="submit">Cadastrar</button>
+    </div>
+    </form>
+</body>
+</html>
+
+<style>
+
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{ 
+    align-items: center;
+    margin: 730px;
+    text-decoration: none;
+
+}
+
+
+body {
+    
+    background: #f5f7fa;
+    color: #333;
+    padding: 20px;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+
+nav {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2980b9;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1abc9c;
+}
+
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form .border{
+
+    margin: 20px 300px;
+}
+
+form .border a{
+
+margin: 420px;
+}
+
+
+
+
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form button {
+    margin-top: 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #219150;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+</style>
