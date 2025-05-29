@@ -12,7 +12,7 @@ $nome = $_POST['nome'];
 <body>
     <div class="container">
         <h1>Cadastro Realizado</h1>
-        <p>O participante <strong><?php echo htmlspecialchars($nome); ?></strong> foi cadastrado com sucesso!</p>
+        <p>O(A) participante <strong><?php echo htmlspecialchars($nome); ?></strong> foi cadastrado com sucesso!</p>
         <a href="cadastro.html">Voltar à página inicial</a>
     </div>
 </body>
