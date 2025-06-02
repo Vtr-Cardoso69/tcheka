@@ -3,41 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Contato - Feira Tecnológica</title>
-   
-   
-</head>
-<body>
-
-    <h1>Entre em Contato</h1>
-
-    <nav>
-        <a href="index.html">Início</a> |
-        <a href="curso.html">Sobre o curso</a> |
-        <a href="cadastro.html">Cadastro</a> |
-        <a href="contato.html">Contato</a> |
-   <a href="Palestra-cadastro.html">Palestra</a>
-    </nav>
-
-    <div class="container">
-        <form action="receber_contato.php" method="POST">
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" required>
-
-            <label for="email">E-mail:</label>
-            <input type="email" name="email" id="email" required>
-
-            <label for="assunto">Assunto:</label>
-            <textarea name="assunto" id="assunto" rows="4" required></textarea>
-
-            <button type="submit">Enviar Mensagem</button>
-        </form>
-    </div>
-
-</body>
-</html>
-
-   
-   <style>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -45,7 +11,6 @@
         }
 
         body {
-         
             height: 100vh;
             position: relative;
             padding: 20px;
@@ -134,6 +99,18 @@
             background-color: #219150;
         }
 
+        .mensagem {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+        }
+
         @media (max-width: 600px) {
             h1 {
                 font-size: 36px;
@@ -149,4 +126,42 @@
             }
         }
     </style>
+</head>
+<body>
 
+    <h1>Entre em Contato</h1>
+
+    <nav>
+        <a href="index.html">Início</a> 
+        <a href="curso.html">Sobre o curso</a> 
+        <a href="cadastro.html">Cadastro</a> 
+        <a href="contato.html">Contato</a>
+   <a href="Palestra-cadastro.html">Palestra</a>
+    <a href="mapa.html">Mapa</a>
+  </nav>
+
+   
+
+    <div class="container">
+        <form action="contato.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" id="endereco" required>
+
+            <label for="cep">CEP:</label>
+            <input type="text" name="cep" id="cep" required pattern="\d{5}-?\d{3}" title="Formato esperado: 12345-678 ou 12345678">
+
+            <label for="assunto">Assunto:</label>
+            <textarea name="assunto" id="assunto" rows="4" required></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </div>
+
+</body>
+</html>

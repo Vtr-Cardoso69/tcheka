@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+ 
+</head>
+<body>
+
+
+
+  
+  <h1>Mapa</h1>
+
+    <nav>
+        <a href="index.html">Início</a> 
+        <a href="curso.html">Sobre o curso</a> 
+        <a href="cadastro.html">Cadastro</a> 
+        <a href="contato.html">Contato</a>
+   <a href="Palestra-cadastro.html">Palestra</a>
+    <a href="mapa.html">Mapa</a>
+  </nav>
+  
+  
+  <div class="mapa-container">
+    <img src="Captura de tela 2025-05-29 115731.png"
+         alt="Mapa" class="mapa-img" id="mapa">
+  </div>
+
+  
+ <style>
+    
+   * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  font-family: sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+  font-size: 48px;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #006aff;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #1abc9c;
+}
+
+.mapa-container {
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
+  border: 3px solid #009bec;
+  border-radius: 12px;
+  position: relative;
+  cursor: grab;
+  background: #dbdbdb;
+  margin: 0 auto; /* centraliza horizontalmente */
+}
+
+.mapa-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  user-select: none;
+  max-width: none;
+  width: 1000px;
+}
+
+      
+</style>
+
+<script>
+    const mapa = document.getElementById('mapa');
+    let isDragging = false;
+    let startX, startY;
+    let currentX = 0, currentY = 0;
+
+    // Quando clicar com o mouse (início do arrasto)
+    mapa.parentElement.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX - currentX;
+      startY = e.clientY - currentY;
+      mapa.parentElement.style.cursor = 'grabbing';
+    });
+
+    // Quando soltar o mouse (fim do arrasto)
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+      mapa.parentElement.style.cursor = 'grab';
+    });
+
+    // Quando mover o mouse (enquanto estiver arrastando)
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      currentX = e.clientX - startX;
+      currentY = e.clientY - startY;
+      mapa.style.left = currentX + 'px';
+      mapa.style.top = currentY + 'px';
+    });
+  </script>
+  
+
+
+
+
+</body>
+</html>
